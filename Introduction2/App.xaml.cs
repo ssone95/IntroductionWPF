@@ -16,7 +16,6 @@ namespace Introduction2
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            MessageBox.Show("Application has started!");
         }
     }
 }

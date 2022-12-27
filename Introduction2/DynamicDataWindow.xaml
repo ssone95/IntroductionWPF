@@ -1,0 +1,22 @@
+﻿<Window x:Class="Introduction2.DynamicDataWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Introduction2"
+        mc:Ignorable="d"
+        Title="DynamicDataWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="70,60,0,0" TextWrapping="Wrap" Text="{Binding Clicks, FallbackValue='0', StringFormat={}{0} Clicks}" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="70,100,0,0" TextWrapping="Wrap" Text="{Binding Clicks, FallbackValue='0', StringFormat={}{0} Clicks}" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="70,140,0,0" TextWrapping="Wrap" Text="{Binding Clicks, FallbackValue='0', StringFormat={}{0} Clicks}" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="70,180,0,0" TextWrapping="Wrap" Text="{Binding Clicks, FallbackValue='0', StringFormat={}{0} Clicks}" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="70,220,0,0" TextWrapping="Wrap" Text="{Binding Clicks, FallbackValue='0', StringFormat={}{0} Clicks}" VerticalAlignment="Top"/>
+        <Button Content="Increment the counter" HorizontalAlignment="Left" Margin="150,139,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <TextBox HorizontalAlignment="Left" Margin="379,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Number1, Mode=TwoWay, FallbackValue='0', UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox HorizontalAlignment="Left" Margin="504,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Number2, Mode=TwoWay, FallbackValue='0', UpdateSourceTrigger=PropertyChanged}"/>
+        
+        <TextBlock HorizontalAlignment="Left" Margin="379,116,0,0" TextWrapping="Wrap" Text="Sum:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="414,116,0,0" TextWrapping="Wrap" Text="{Binding Sum, FallbackValue='0'}" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
