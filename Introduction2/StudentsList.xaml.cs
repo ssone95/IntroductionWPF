@@ -1,4 +1,5 @@
-﻿using MahApps.Metro.Controls;
+﻿using Introduction2.ViewModels;
+using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,26 +18,21 @@ using System.Windows.Shapes;
 namespace Introduction2
 {
     /// <summary>
-    /// Interaction logic for DynamicDataWindow.xaml
+    /// Interaction logic for StudentsList.xaml
     /// </summary>
-    public partial class DynamicDataWindow : MetroWindow, INotifyPropertyChanged
+    public partial class StudentsList : MetroWindow, INotifyPropertyChanged
     {
-        public ButtonClickViewModel ViewModel;
 
-        public DynamicDataWindow()
-        {
-            InitializeComponent();
-
-            ViewModel = new ButtonClickViewModel();
-
-            DataContext = ViewModel;
-        }
+        public StudentsListViewModel StudentsListVM { get; set; }
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public StudentsList()
         {
-            ViewModel.IncrementClicks();
+            InitializeComponent();
+            StudentsListVM = new StudentsListViewModel();
+
+            DataContext = StudentsListVM;
         }
     }
 }
